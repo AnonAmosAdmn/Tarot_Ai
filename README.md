@@ -1,4 +1,4 @@
-![AAi Taroot Readings](https://i.redd.it/akowzb7avmdf1.png)
+![AAi Taroot Readings]https://i.redd.it/akowzb7avmdf1.png
 ===============================================================
 
 # Download the Game:
@@ -18,9 +18,9 @@ mygame_env\Scripts\activate     # Windows
 ===============================================================
 
 
-Get an Open AAi api key:
+# Get an Open Ai api key:
 
-(https://platform.openai.com/api-keys)
+https://platform.openai.com/api-keys
 
 ===============================================================
 

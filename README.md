@@ -34,3 +34,8 @@ pip install pygame
 python3 tarot.py
 
 ===============================================================
+
+# ERROR 429
+
+your open ai subscription has expired
+or you have exceeded your quota

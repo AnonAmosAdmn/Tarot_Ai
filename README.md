@@ -19,8 +19,8 @@ mygame_env\Scripts\activate     # Windows
 
 # Edit .env file:
 
-input your api key
-
+input your Open Ai api key
+https://platform.openai.com/api-keys
 ===============================================================
 
 # Then install Pygame:

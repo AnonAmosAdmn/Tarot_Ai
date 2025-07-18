@@ -1,9 +1,9 @@
-![Diablo-inspired dungeon crawler](https://preview.redd.it/diablo-inspired-dungeon-crawler-v0-axpkyo34xycf1.png?width=1080&crop=smart&auto=webp&s=2cd443983eb95209eb0fea96dade08912378d79b)
+![AAi Taroot Readings](https://i.redd.it/akowzb7avmdf1.png)
 ===============================================================
 
 # Download the Game:
 
-git clone [https://github.com/AnonAmosAdmn/tarot.py.git](https://github.com/AnonAmosAdmn/Tarot_Ai.git)
+git clone (https://github.com/AnonAmosAdmn/Tarot_Ai.git)
 
 ===============================================================
 

@@ -2,13 +2,13 @@
 
 ===============================================================
 
-# Download the Game:
+# 1. Download the Game:
 
 git clone https://github.com/AnonAmosAdmn/Tarot_Ai.git
 
 ===============================================================
 
-# Create a Virtual Environment:
+# 2. Create a Virtual Environment:
 
 python -m venv mygame_env
 
@@ -19,31 +19,31 @@ mygame_env\Scripts\activate     # Windows
 ===============================================================
 
 
-# Get an Open Ai api key:
+# 3. Get an Open Ai api key:
 
 https://platform.openai.com/api-keys
 
 ===============================================================
 
-# Edit .env file:
+# 4. Edit .env file:
 
 input your Open Ai api key
 
 ===============================================================
 
-# Then install Open Ai:
+# 5. Then install Open Ai:
 
 pip install openai
 
 ===============================================================
 
-# Then install Pygame:
+# 6. Then install Pygame:
 
 pip install pygame
 
 ===============================================================
 
-# Run the game :
+# 7. Run the game :
 
 python3 tarot.py
 

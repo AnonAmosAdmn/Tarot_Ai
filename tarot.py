@@ -294,11 +294,71 @@ class TarotGame:
                     f"Meaning: {card['meaning']}\n\n"
                 )
             
-            prompt += (
-                "Provide a mystical interpretation of this reading as if you're speaking directly to the querent. "
-                "Include symbolic meanings, intuitive insights, and practical guidance. "
-                "Address the positions and how they relate to each other in the spread."
-            )
+            prompt += ("""
+            ||| STRICT FORMATTING COMMANDS |||
+
+            1. **MANDATORY SPACING FORMAT**:
+            [NEWLINE][NEWLINE]
+            [EMOJI] [Position#] - [Position Name]: [Card Name] (Upright/Reversed)[NEWLINE]
+            [Interpretation paragraph 1][NEWLINE]
+            [Interpretation paragraph 2][NEWLINE]
+            [NEWLINE]
+
+            2. **INTERPRETATION STRUCTURE**:
+            - First line: Core meaning (complete sentence)
+            - Second line: Practical implications
+            - Third line: Intuitive message
+            - Fourth line: Connection to other cards
+
+            3. **FINAL REFLECTION FORMAT**:
+            [NEWLINE][NEWLINE]
+            🔮 Final Reflection:[NEWLINE]
+            [Paragraph 1][NEWLINE]
+            [Paragraph 2][NEWLINE]
+            [Closing statement][NEWLINE]
+            [NEWLINE]
+
+always use the same emojis they are delimiters
+
+            === EXAMPLE OF REQUIRED OUTPUT ===
+
+🌟 1 - Present: 4 of Wands (Reversed)
+You're in a phase where what should feel stable or celebratory—like home, relationships, or creative achievements—feels instead disrupted. This card reversed speaks of conflict within a familiar structure, perhaps tension in a home, team, or partnership. You may be transitioning away from what once brought you comfort, or feeling unsupported as you try to move forward.
+
+⚔️ 2 - Challenge: 2 of Cups (Reversed)
+Your biggest challenge right now is a breakdown in communication or emotional connection with someone important. A partnership or relationship is out of balance—maybe romantic, maybe a close friend or ally. Mistrust or misunderstandings may be at play, and healing this rift could be central to your current struggle.
+
+⏳ 3 - Past: 6 of Cups (Reversed)
+You've recently been forced to let go of the past—perhaps a memory, old pattern, or nostalgia was holding you back. Whether it was comforting or painful, you’re now in the process of moving forward. This is a sign of emotional growth, though not without discomfort.
+
+🌑 4 - Future: The Moon (Upright)
+What’s coming next may feel uncertain or disorienting. The Moon brings confusion, illusions, and hidden truths—things are not what they appear. You will need to rely on intuition, dreams, and your inner compass to navigate what lies ahead. Don't act on fear or illusion—seek clarity in the fog.
+
+☁️ 5 - Above (Conscious Goal): 6 of Wands (Reversed)
+You're struggling with recognition and validation. You might feel that your efforts go unnoticed, or you fear failure and public judgment. This card can also point to ego wounds—perhaps you want to win or be seen, but fear losing face. It’s a reminder that true success comes from within, not applause.
+
+🧑‍🤝‍🧑 6 - Below (Unconscious Influence): 3 of Cups (Upright)
+At a deeper level, you crave connection, joy, and genuine friendship. There's a strong desire to belong and be celebrated with others—even if recent events have made you feel isolated. This unconscious influence may be guiding you to seek a new sense of community or re-establish joyful bonds.
+
+🌀 7 - Advice: The World (Reversed)
+You're being asked to complete what you’ve left unfinished. There’s a cycle in your life—emotional, spiritual, or literal—that hasn’t come to full closure. Fear of change, fear of endings, or feeling like something’s missing is blocking your progress. It’s time to gather your strength and see the journey through.
+
+💨 8 - External Influences: Knight of Swords (Upright)
+Your environment is fast-moving and intense, with people or events pushing you toward rapid decisions. Someone around you may be aggressive in their opinions or rushing things. Be wary of impulsive actions—both your own and others'. Stay grounded as you navigate this external pressure.
+
+💖 9 - Hopes/Fears: 10 of Cups (Upright)
+At your core, you long for peace, harmony, and emotional fulfillment, particularly within your home or family life. This card speaks to the dream of deep connection, support, and love. But since this is also in your fears, perhaps you’re afraid it may never come—or that you’ll sabotage it. It’s a beautiful vision, but you may fear it's just out of reach.
+
+🌱 10 - Outcome: 7 of Pentacles (Upright)
+Your outcome suggests growth, but not overnight. This is a card of patient progress—planting seeds and watching them slowly bear fruit. Your effort will pay off, but only if you assess your investments wisely. This may not be a dramatic resolution, but it’s a solid one: a future earned through care, consistency, and self-evaluation.
+
+🔮 Final Reflection:
+This spread tells the story of someone in emotional transition—between letting go of the past, confronting a broken bond or relationship, and walking a foggy, uncertain path forward. You're being invited to face illusions, finish old cycles, and trust your intuition. While it may feel like support is lacking now, the foundation for lasting growth, healing, and joyful connection is already within reach—you just have to be willing to do the patient work, and close what needs closing.
+
+            The cards encourage you to face these challenges directly...
+
+            Remember: Growth often comes through discomfort.
+            """)
             
             # Updated OpenAI API call
             client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -560,13 +620,13 @@ class TarotGame:
 
 
     def draw_ai_response_box(self, screen):
-        """Draw the AI interpretation in a fancy box"""
+        """Draw the AI interpretation in a fancy box with proper section breaks"""
         if not self.ai_response:
             return False
             
         # Box dimensions
-        box_width = min(1000, WIDTH - 100)
-        box_height = min(600, HEIGHT - 200)
+        box_width = min(1500, WIDTH - 100)
+        box_height = min(1500, HEIGHT - 200)
         box_x = (WIDTH - box_width) // 2
         box_y = (HEIGHT - box_height) // 2
         
@@ -590,8 +650,8 @@ class TarotGame:
             if x == 0 and y == 0:  # Top-left - moon symbol
                 pygame.draw.circle(box_surf, DARK_GOLD, (corner_size//2, corner_size//2), corner_size//3, 2)
                 pygame.draw.arc(box_surf, DARK_GOLD, 
-                                (corner_size//6, corner_size//6, 2*corner_size//3, 2*corner_size//3),
-                                math.pi/2, 3*math.pi/2, 2)
+                            (corner_size//6, corner_size//6, 2*corner_size//3, 2*corner_size//3),
+                            math.pi/2, 3*math.pi/2, 2)
             elif x == box_width and y == 0:  # Top-right - sun symbol
                 pygame.draw.circle(box_surf, DARK_GOLD, (box_width-corner_size//2, corner_size//2), corner_size//3, 2)
                 for i in range(8):
@@ -599,9 +659,8 @@ class TarotGame:
                     end_x = box_width-corner_size//2 + (corner_size//3 + 5) * math.cos(angle)
                     end_y = corner_size//2 + (corner_size//3 + 5) * math.sin(angle)
                     pygame.draw.line(box_surf, DARK_GOLD,
-                                    (box_width-corner_size//2, corner_size//2),
-                                    (end_x, end_y), 2)
-            # Similar for other corners...
+                                (box_width-corner_size//2, corner_size//2),
+                                (end_x, end_y), 2)
         
         # Draw the surface to screen
         screen.blit(box_surf, (box_x, box_y))
@@ -610,31 +669,61 @@ class TarotGame:
         title = title_font.render("Mystical Interpretation", True, DARK_PURPLE)
         screen.blit(title, (box_x + box_width//2 - title.get_width()//2, box_y + 20))
         
-        # Render wrapped text
-        words = self.ai_response.split()
-        lines = []
-        current_line = ""
+        # Process and render text with emoji breaks
+        emoji_list = ["🌟", "⚔️", "⏳", "🌑", "☁️", "🧑‍🤝‍🧑", "🌀", "💨", "💖", "🌱", "🔮"]
+        sections = []
+        current_section = ""
+        
+        # Split text at emojis while keeping them
+        for char in self.ai_response:
+            if char in emoji_list:
+                if current_section:
+                    sections.append(current_section)
+                    current_section = ""
+            current_section += char
+        if current_section:
+            sections.append(current_section)
+        
+        # Render each section with proper spacing
         line_height = 30
         max_lines = (box_height - 100) // line_height
+        current_y = box_y + 80
+        lines_rendered = 0
         
-        for word in words:
-            test_line = current_line + word + " "
-            if font.size(test_line)[0] < box_width - 40:
-                current_line = test_line
-            else:
-                lines.append(current_line)
-                current_line = word + " "
-                if len(lines) >= max_lines:
-                    break
-        if current_line and len(lines) < max_lines:
-            lines.append(current_line)
-        
-        # Draw text lines
-        for i, line in enumerate(lines):
-            if i >= max_lines:
-                break
-            text = font.render(line, True, DARK_PURPLE)
-            screen.blit(text, (box_x + 20, box_y + 80 + i * line_height))
+        for section in sections:
+            # Skip empty sections
+            if not section.strip():
+                continue
+                
+            # Split section into words
+            words = section.split()
+            current_line = ""
+            
+            # Word wrapping logic
+            for word in words:
+                test_line = current_line + word + " "
+                if font.size(test_line)[0] < box_width - 40:
+                    current_line = test_line
+                else:
+                    if lines_rendered >= max_lines:
+                        break
+                    text = font.render(current_line, True, DARK_PURPLE)
+                    screen.blit(text, (box_x + 20, current_y))
+                    current_y += line_height
+                    lines_rendered += 1
+                    current_line = word + " "
+            
+            # Render remaining words
+            if current_line and lines_rendered < max_lines:
+                text = font.render(current_line, True, DARK_PURPLE)
+                screen.blit(text, (box_x + 20, current_y))
+                current_y += line_height
+                lines_rendered += 1
+            
+            # Add extra space between sections
+            if lines_rendered < max_lines and section != sections[-1]:
+                current_y += line_height // 2  # Half-line spacing
+                lines_rendered += 0.5
         
         # Draw close button
         close_button_y = box_y + box_height - 60
@@ -656,7 +745,7 @@ class TarotGame:
         
         close_text = small_font.render("Close", True, WHITE)
         close_surf.blit(close_text, (100 - close_text.get_width()//2, 
-                                    25 - close_text.get_height()//2))
+                                25 - close_text.get_height()//2))
         
         screen.blit(close_surf, (close_button_x, close_button_y))
         

@@ -1,4 +1,4 @@
-![AAi Taroot Readings]https://i.redd.it/akowzb7avmdf1.png
+![Ai Taroot Readings]https://i.redd.it/akowzb7avmdf1.png
 ===============================================================
 
 # Download the Game:

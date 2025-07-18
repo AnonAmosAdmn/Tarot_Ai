@@ -31,6 +31,12 @@ input your Open Ai api key
 
 ===============================================================
 
+# Then install Open Ai:
+
+pip install openai
+
+===============================================================
+
 # Then install Pygame:
 
 pip install pygame

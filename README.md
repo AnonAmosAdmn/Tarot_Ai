@@ -4,7 +4,7 @@
 
 # Download the Game:
 
-git clone (https://github.com/AnonAmosAdmn/Tarot_Ai.git)
+git clone https://github.com/AnonAmosAdmn/Tarot_Ai.git
 
 ===============================================================
 

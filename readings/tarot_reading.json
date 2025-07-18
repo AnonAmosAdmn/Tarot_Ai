@@ -1,0 +1,65 @@
+{
+  "spread_type": "Celtic Cross",
+  "cards": [
+    {
+      "position": "1 - Present",
+      "card_name": "Knight of Swords",
+      "reversed": false,
+      "meaning": "Represents swift action, assertiveness, and charging ahead. Symbolizes a sharp mind, ambition, or rushing into battles (literal or metaphorical). Encourages boldness but warns of recklessness."
+    },
+    {
+      "position": "2 - Challenge",
+      "card_name": "7 of Cups",
+      "reversed": false,
+      "meaning": "Symbolizes choices, illusions, and overwhelming options. Represents fantasies, daydreams, and the challenge of discerning reality from deception. Encourages clarity before deciding."
+    },
+    {
+      "position": "3 - Past",
+      "card_name": "XIII Death",
+      "reversed": false,
+      "meaning": "Symbolizes transformation, endings, and rebirth. Represents necessary change, the closing of one chapter, and making way for new beginnings. Encourages release and acceptance of transitions."
+    },
+    {
+      "position": "4 - Future",
+      "card_name": "XII The Hanged Man",
+      "reversed": false,
+      "meaning": "Represents surrender, new perspectives, and voluntary sacrifice. Symbolizes pausing to gain wisdom, letting go of control, and seeing things differently for spiritual growth."
+    },
+    {
+      "position": "5 - Above",
+      "card_name": "3 of Cups",
+      "reversed": false,
+      "meaning": "Symbolizes celebration, friendship, and joyous gatherings. Represents community, shared happiness, and the warmth of supportive relationships. Encourages gratitude and connection with loved ones."
+    },
+    {
+      "position": "6 - Below",
+      "card_name": "4 of Cups",
+      "reversed": true,
+      "meaning": "Suggests new opportunities arising, reawakening to life\u2019s joys, or emerging from emotional stagnation. May indicate readiness to accept what is being offered."
+    },
+    {
+      "position": "7 - Advice",
+      "card_name": "IV The Emperor",
+      "reversed": false,
+      "meaning": "Represents authority, structure, and disciplined leadership. Symbolizes stability, protection, and the establishment of order. Encourages taking control, setting boundaries, and ruling with logic and strategy."
+    },
+    {
+      "position": "8 - External",
+      "card_name": "III The Empress",
+      "reversed": false,
+      "meaning": "Symbolizes fertility, nurturing energy, and abundance in all forms. Represents creativity, motherhood, and the flourishing of ideas or projects. A card of sensuality, beauty, and natural growth."
+    },
+    {
+      "position": "9 - Hopes/Fears",
+      "card_name": "3 of Pentacles",
+      "reversed": false,
+      "meaning": "Symbolizes teamwork, craftsmanship, and collaborative success. Represents skilled work, dedication, and building something lasting. Encourages learning from experts."
+    },
+    {
+      "position": "10 - Outcome",
+      "card_name": "XV The Devil",
+      "reversed": false,
+      "meaning": "Symbolizes bondage, materialism, and unhealthy attachments. Represents temptation, addiction, or being trapped in negative patterns. Encourages examining what holds you back."
+    }
+  ]
+}

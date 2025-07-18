@@ -1,0 +1,392 @@
+{
+    "0 The Fool": {
+        "image": "the_fool.jpg",
+        "upright": "Symbolizes new beginnings, childlike wonder, and stepping into the unknown with faith. Represents spontaneity, adventure, and the willingness to take a leap of faith without fear of consequences. A card of infinite potential and fresh starts.",
+        "reversed": "Indicates recklessness, poor judgment, or acting without considering consequences. May suggest naivety, foolish risks, or a lack of direction. Warns against impulsive behavior that could lead to instability or chaos."
+    },
+    "I The Magician": {
+        "image": "the_magician.jpg",
+        "upright": "Represents manifestation, resourcefulness, and harnessing one's full potential. The Magician channels energy from the spiritual to the physical, using skill, willpower, and creativity to achieve goals. A sign of power, focus, and mastery over circumstances.",
+        "reversed": "Suggests manipulation, untapped abilities, or wasted potential. May indicate trickery, deception, or poor planning. Warns of misused talents or a lack of direction in applying one's skills effectively."
+    },
+    "II The High Priestess": {
+        "image": "the_high_priestess.jpg",
+        "upright": "Embodies intuition, mystery, and the subconscious mind. Represents hidden knowledge, deep wisdom, and the need to trust one's instincts. Encourages looking beyond the surface and listening to inner guidance.",
+        "reversed": "Indicates repressed intuition, secrets, or superficial understanding. May suggest ignoring gut feelings, deception, or an unwillingness to explore deeper truths. Warns of hidden agendas or confusion."
+    },
+    "III The Empress": {
+        "image": "the_empress.jpg",
+        "upright": "Symbolizes fertility, nurturing energy, and abundance in all forms. Represents creativity, motherhood, and the flourishing of ideas or projects. A card of sensuality, beauty, and natural growth.",
+        "reversed": "Suggests smothering love, neglect, or over-dependence. May indicate creative blocks, financial instability, or lack of self-care. Warns against being overly possessive or disconnected from nurturing energy."
+    },
+    "IV The Emperor": {
+        "image": "the_emperor.jpg",
+        "upright": "Represents authority, structure, and disciplined leadership. Symbolizes stability, protection, and the establishment of order. Encourages taking control, setting boundaries, and ruling with logic and strategy.",
+        "reversed": "Indicates tyranny, excessive control, or rigidity. May suggest abuse of power, authoritarianism, or a lack of flexibility. Warns against being overly domineering or disconnected from compassion."
+    },
+    "V The Hierophant": {
+        "image": "the_hierophant.jpg",
+        "upright": "Symbolizes tradition, spiritual guidance, and structured belief systems. Represents conformity, education, and seeking wisdom from established institutions. Encourages following moral or ethical teachings.",
+        "reversed": "Suggests rebellion against tradition, unorthodox beliefs, or rejecting dogma. May indicate a need for personal spirituality over institutional rules. Warns of rigid thinking or hypocrisy."
+    },
+    "VI The Lovers": {
+        "image": "the_lovers.jpg",
+        "upright": "Represents love, harmony, and meaningful choices. Symbolizes deep connections, alignment of values, and soulmate bonds. May also indicate important decisions that require heart-centered discernment.",
+        "reversed": "Suggests imbalance, misalignment, or poor relationship choices. May indicate conflicts, infidelity, or emotional disconnection. Warns of indecision or partnerships lacking true harmony."
+    },
+    "VII The Chariot": {
+        "image": "the_chariot.jpg",
+        "upright": "Symbolizes willpower, determination, and victory through control. Represents forward movement, overcoming obstacles, and harnessing opposing forces to achieve success. A card of ambition and focused drive.",
+        "reversed": "Indicates lack of direction, internal conflict, or uncontrolled aggression. May suggest obstacles, delays, or failure due to scattered energy. Warns against being reckless or losing self-discipline."
+    },
+    "VIII Strength": {
+        "image": "strength.jpg",
+        "upright": "Represents inner strength, courage, and resilience. Symbolizes mastering emotions, patience, and gentle power over brute force. Encourages compassion, confidence, and endurance.",
+        "reversed": "Suggests self-doubt, weakness, or lack of control. May indicate insecurity, fear, or allowing emotions to overpower reason. Warns against losing faith in one’s abilities."
+    },
+    "IX The Hermit": {
+        "image": "the_hermit.jpg",
+        "upright": "Symbolizes introspection, soul-searching, and seeking inner wisdom. Represents solitude, spiritual guidance, and the need for quiet reflection to find answers within.",
+        "reversed": "Indicates isolation, loneliness, or withdrawal from society. May suggest refusing help, excessive introspection, or feeling lost. Warns against disconnecting from the world entirely."
+    },
+    "X Wheel of Fortune": {
+        "image": "wheel_of_fortune.jpg",
+        "upright": "Represents cycles, destiny, and turning points. Symbolizes luck changing, karmic lessons, and the inevitability of life’s ups and downs. Encourages adaptability and embracing change.",
+        "reversed": "Suggests bad luck, resistance to change, or feeling stuck in a cycle. May indicate delays, misfortune, or an inability to break negative patterns. Warns against fighting inevitable transitions."
+    },
+    "XI Justice": {
+        "image": "justice.jpg",
+        "upright": "Symbolizes fairness, truth, and karmic balance. Represents legal matters, accountability, and logical decision-making. Encourages integrity and weighing choices carefully.",
+        "reversed": "Indicates injustice, dishonesty, or unfair treatment. May suggest legal troubles, bias, or avoiding responsibility. Warns against unethical behavior or imbalance in decisions."
+    },
+    "XII The Hanged Man": {
+        "image": "the_hanged_man.jpg",
+        "upright": "Represents surrender, new perspectives, and voluntary sacrifice. Symbolizes pausing to gain wisdom, letting go of control, and seeing things differently for spiritual growth.",
+        "reversed": "Suggests resistance to change, stalling, or fear of letting go. May indicate wasted time, avoidance, or unwillingness to make necessary sacrifices."
+    },
+    "XIII Death": {
+        "image": "death.jpg",
+        "upright": "Symbolizes transformation, endings, and rebirth. Represents necessary change, the closing of one chapter, and making way for new beginnings. Encourages release and acceptance of transitions.",
+        "reversed": "Indicates resistance to change, stagnation, or fear of transformation. May suggest clinging to the past, avoiding necessary endings, or delayed progress."
+    },
+    "XIV Temperance": {
+        "image": "temperance.jpg",
+        "upright": "Represents balance, moderation, and harmony. Symbolizes patience, blending opposites, and finding the middle path. Encourages healing, self-control, and measured progress.",
+        "reversed": "Suggests imbalance, excess, or lack of self-discipline. May indicate extremes, recklessness, or poor health. Warns against impatience or lack of harmony."
+    },
+    "XV The Devil": {
+        "image": "the_devil.jpg",
+        "upright": "Symbolizes bondage, materialism, and unhealthy attachments. Represents temptation, addiction, or being trapped in negative patterns. Encourages examining what holds you back.",
+        "reversed": "Indicates breaking free, releasing limiting beliefs, or overcoming addiction. May suggest liberation, self-awareness, or reclaiming power from toxic influences."
+    },
+    "XVI The Tower": {
+        "image": "the_tower.jpg",
+        "upright": "Represents sudden upheaval, revelation, and destruction of illusions. Symbolizes unexpected change, collapse of structures, and necessary chaos for growth. A wake-up call to rebuild stronger foundations.",
+        "reversed": "Suggests avoiding disaster, resisting change, or delaying inevitable breakdowns. May indicate fear of upheaval or minor disruptions instead of full collapse."
+    },
+    "XVII The Star": {
+        "image": "the_star.jpg",
+        "upright": "Symbolizes hope, inspiration, and spiritual guidance. Represents healing, serenity, and faith in the universe. Encourages optimism, renewal, and following one’s inner light.",
+        "reversed": "Indicates hopelessness, despair, or lack of faith. May suggest disillusionment, pessimism, or feeling disconnected from inspiration."
+    },
+    "XVIII The Moon": {
+        "image": "the_moon.jpg",
+        "upright": "Represents illusion, intuition, and the subconscious. Symbolizes hidden fears, dreams, and things not being as they seem. Encourages trusting instincts while navigating uncertainty.",
+        "reversed": "Suggests confusion, deception, or anxiety. May indicate paranoia, misinterpretation, or repressed emotions surfacing. Warns against self-deception."
+    },
+    "XIX The Sun": {
+        "image": "the_sun.jpg",
+        "upright": "Symbolizes joy, success, and vitality. Represents clarity, happiness, and the warmth of achievement. Encourages optimism, confidence, and basking in life’s blessings.",
+        "reversed": "Indicates temporary setbacks, lack of enthusiasm, or minor obstacles. May suggest delays in success or needing to rediscover joy."
+    },
+    "XX Judgement": {
+        "image": "judgement.jpg",
+        "upright": "Represents rebirth, awakening, and answering a higher calling. Symbolizes self-evaluation, absolution, and embracing transformation. Encourages heeding life’s purpose.",
+        "reversed": "Suggests self-doubt, ignoring inner calling, or fear of judgment. May indicate stagnation, reluctance to change, or unresolved guilt."
+    },
+    "XXI The World": {
+        "image": "the_world.jpg",
+        "upright": "Symbolizes completion, fulfillment, and wholeness. Represents achievement, integration, and the successful end of a cycle. Encourages celebration and readiness for new journeys.",
+        "reversed": "Indicates incompletion, lack of closure, or fear of moving forward. May suggest delays in goals or feeling unfulfilled despite progress."
+    },
+    "Ace of Wands": {
+        "image": "ace_of_wands.jpg",
+        "upright": "Represents a burst of creative energy, new inspiration, and potential for growth. Symbolizes passion, ambition, and the spark that ignites new ventures. Encourages taking bold action.",
+        "reversed": "Suggests delays, lack of motivation, or missed opportunities. May indicate creative blocks, unfulfilled potential, or hesitation in pursuing passions."
+    },
+    "2 of Wands": {
+        "image": "2_of_wands.jpg",
+        "upright": "Symbolizes planning, future possibilities, and discovery. Represents making decisions with foresight, exploring new horizons, and having the world at your fingertips.",
+        "reversed": "Indicates poor planning, fear of the unknown, or lack of direction. May suggest hesitation, indecision, or being overwhelmed by choices."
+    },
+    "3 of Wands": {
+        "image": "3_of_wands.jpg",
+        "upright": "Represents expansion, foresight, and progress. Symbolizes waiting for efforts to bear fruit, exploring new opportunities, and having a broad perspective.",
+        "reversed": "Suggests obstacles, delays, or frustration with progress. May indicate lack of foresight, impatience, or unfulfilled expectations."
+    },
+    "4 of Wands": {
+        "image": "4_of_wands.jpg",
+        "upright": "Symbolizes celebration, harmony, and joyful reunions. Represents stability, homecoming, and milestones worth commemorating. Encourages gratitude and shared happiness.",
+        "reversed": "Indicates conflict, instability, or lack of support. May suggest postponed celebrations, domestic tension, or feeling unsettled."
+    },
+    "5 of Wands": {
+        "image": "5_of_wands.jpg",
+        "upright": "Represents competition, conflict, and challenges. Symbolizes rivalry, differing opinions, and the need to assert oneself in a dynamic environment.",
+        "reversed": "Suggests avoiding conflict, finding compromise, or resolving disputes. May indicate inner turmoil or fear of confrontation."
+    },
+    "6 of Wands": {
+        "image": "6_of_wands.jpg",
+        "upright": "Symbolizes victory, recognition, and success. Represents public acclaim, overcoming obstacles, and achieving hard-earned rewards.",
+        "reversed": "Indicates egotism, fall from grace, or lack of recognition. May suggest false pride or success coming at a cost."
+    },
+    "7 of Wands": {
+        "image": "7_of_wands.jpg",
+        "upright": "Represents perseverance, standing your ground, and defending your position. Symbolizes resilience, competition, and holding your own against challenges.",
+        "reversed": "Suggests giving up, feeling overwhelmed, or failure to assert oneself. May indicate self-doubt or being outnumbered."
+    },
+    "8 of Wands": {
+        "image": "8_of_wands.jpg",
+        "upright": "Symbolizes rapid movement, fast-paced change, and action. Represents swift developments, messages arriving, and things falling into place quickly.",
+        "reversed": "Indicates delays, frustration, or resisting change. May suggest miscommunication or things moving too slowly."
+    },
+    "9 of Wands": {
+        "image": "9_of_wands.jpg",
+        "upright": "Represents resilience, persistence, and nearing the finish line. Symbolizes inner strength, guarding one’s position, and pushing through the final challenges.",
+        "reversed": "Suggests exhaustion, fatigue, or questioning motivations. May indicate burnout or feeling unable to continue."
+    },
+    "10 of Wands": {
+        "image": "10_of_wands.jpg",
+        "upright": "Symbolizes burden, responsibility, and hard work. Represents carrying a heavy load, feeling overworked, and the need to delegate or prioritize.",
+        "reversed": "Indicates over-commitment, inability to delegate, or collapse under pressure. May suggest taking on too much or unnecessary burdens."
+    },
+    "Page of Wands": {
+        "image": "page_of_wands.jpg",
+        "upright": "Represents enthusiasm, exploration, and new creative ventures. Symbolizes a free spirit, curiosity, and the spark of inspiration.",
+        "reversed": "Suggests lack of direction, procrastination, or immaturity. May indicate unfulfilled ideas or scattered energy."
+    },
+    "Knight of Wands": {
+        "image": "knight_of_wands.jpg",
+        "upright": "Symbolizes energy, passion, and adventure. Represents bold action, impulsiveness, and charging ahead with enthusiasm.",
+        "reversed": "Indicates haste, recklessness, or lack of follow-through. May suggest frustration, delays, or burnout from scattered efforts."
+    },
+    "Queen of Wands": {
+        "image": "queen_of_wands.jpg",
+        "upright": "Represents confidence, determination, and vivacity. Symbolizes leadership, charisma, and a bold, independent spirit.",
+        "reversed": "Suggests insecurity, jealousy, or domineering behavior. May indicate lack of self-worth or manipulative tendencies."
+    },
+    "King of Wands": {
+        "image": "king_of_wands.jpg",
+        "upright": "Symbolizes leadership, vision, and entrepreneurial spirit. Represents charisma, bold decision-making, and inspiring others.",
+        "reversed": "Indicates impulsiveness, poor leadership, or ruthlessness. May suggest arrogance or misuse of power."
+    },
+    "Ace of Cups": {
+        "image": "ace_of_cups.jpg",
+        "upright": "Symbolizes the birth of new emotions, deep love, and spiritual fulfillment. Represents overflowing joy, emotional renewal, and the beginning of meaningful relationships. Encourages opening the heart to compassion and connection.",
+        "reversed": "Indicates emotional emptiness, blocked feelings, or love that has faded. May suggest heartbreak, creative stagnation, or an inability to connect deeply with others."
+    },
+    "2 of Cups": {
+        "image": "2_of_cups.jpg",
+        "upright": "Represents soulmate connections, mutual respect, and emotional harmony. Symbolizes partnerships, whether romantic or platonic, built on trust and shared feelings. A card of deep bonds and balanced relationships.",
+        "reversed": "Suggests miscommunication, broken trust, or imbalance in relationships. May indicate one-sided love, arguments, or the need to reassess emotional connections."
+    },
+    "3 of Cups": {
+        "image": "3_of_cups.jpg",
+        "upright": "Symbolizes celebration, friendship, and joyous gatherings. Represents community, shared happiness, and the warmth of supportive relationships. Encourages gratitude and connection with loved ones.",
+        "reversed": "Indicates overindulgence, gossip, or toxic social circles. May suggest loneliness despite being surrounded by people or superficial friendships lacking depth."
+    },
+    "4 of Cups": {
+        "image": "4_of_cups.jpg",
+        "upright": "Represents introspection, emotional withdrawal, and contemplation. Symbolizes a period of apathy or dissatisfaction, prompting inner reflection before re-engaging with the world.",
+        "reversed": "Suggests new opportunities arising, reawakening to life’s joys, or emerging from emotional stagnation. May indicate readiness to accept what is being offered."
+    },
+    "5 of Cups": {
+        "image": "5_of_cups.jpg",
+        "upright": "Symbolizes grief, regret, and focusing on loss. Represents disappointment, sorrow over past mistakes, or mourning what could have been. Encourages acknowledging pain before healing.",
+        "reversed": "Indicates acceptance, finding silver linings, and moving forward. May suggest emotional recovery, forgiveness, or realizing that not all is lost."
+    },
+    "6 of Cups": {
+        "image": "6_of_cups.jpg",
+        "upright": "Represents nostalgia, innocence, and reconnecting with the past. Symbolizes childhood memories, simple joys, or reunions with old friends. Encourages kindness and sentimental reflection.",
+        "reversed": "Suggests being stuck in the past, reluctance to grow, or unresolved childhood issues. May indicate unhealthy nostalgia or needing to release old wounds."
+    },
+    "7 of Cups": {
+        "image": "7_of_cups.jpg",
+        "upright": "Symbolizes choices, illusions, and overwhelming options. Represents fantasies, daydreams, and the challenge of discerning reality from deception. Encourages clarity before deciding.",
+        "reversed": "Indicates gaining clarity, making firm decisions, or seeing through illusions. May suggest grounding oneself in reality rather than wishful thinking."
+    },
+    "8 of Cups": {
+        "image": "8_of_cups.jpg",
+        "upright": "Represents walking away, emotional departure, and seeking deeper meaning. Symbolizes leaving behind what no longer fulfills you, even if it’s painful. Encourages following inner truth.",
+        "reversed": "Suggests fear of abandonment, avoiding necessary endings, or clinging to unhealthy situations. May indicate reluctance to move on despite unhappiness."
+    },
+    "9 of Cups": {
+        "image": "9_of_cups.jpg",
+        "upright": "Symbolizes emotional fulfillment, contentment, and wishes coming true. Represents gratitude, self-satisfaction, and enjoying life’s pleasures. Often called the 'wish card.'",
+        "reversed": "Indicates smugness, overindulgence, or dissatisfaction despite having much. May suggest hollow achievements or taking blessings for granted."
+    },
+    "10 of Cups": {
+        "image": "10_of_cups.jpg",
+        "upright": "Represents harmony, family bliss, and emotional fulfillment. Symbolizes happy home life, lasting joy, and alignment in relationships. Encourages gratitude for love and support.",
+        "reversed": "Suggests family conflicts, broken harmony, or misaligned values. May indicate domestic tension or unfulfilled emotional needs."
+    },
+    "Page of Cups": {
+        "image": "page_of_cups.jpg",
+        "upright": "Symbolizes intuitive messages, creative inspiration, and emotional sensitivity. Represents a dreamer, often bringing unexpected emotional news or artistic ideas. Encourages childlike wonder.",
+        "reversed": "Indicates emotional immaturity, creative blocks, or insecurity. May suggest moodiness, unrealistic fantasies, or being overly sensitive."
+    },
+    "Knight of Cups": {
+        "image": "knight_of_cups.jpg",
+        "upright": "Represents romance, charm, and poetic idealism. Symbolizes a heartfelt proposal, emotional pursuit, or a 'knight in shining armor' energy. Encourages following the heart.",
+        "reversed": "Suggests mood swings, unfulfilled expectations, or emotional manipulation. May indicate insincerity or disappointment in love."
+    },
+    "Queen of Cups": {
+        "image": "queen_of_cups.jpg",
+        "upright": "Symbolizes compassion, emotional wisdom, and nurturing energy. Represents deep empathy, intuitive insight, and calm support. Encourages trusting one’s feelings.",
+        "reversed": "Indicates emotional manipulation, martyrdom, or insecurity. May suggest being overly dependent or suppressing true emotions."
+    },
+    "King of Cups": {
+        "image": "king_of_cups.jpg",
+        "upright": "Represents emotional mastery, diplomacy, and balanced leadership. Symbolizes compassion blended with wisdom, often in counseling or healing roles. Encourages emotional control without detachment.",
+        "reversed": "Suggests emotional abuse, moodiness, or volatility. May indicate repressed feelings, coldness, or using emotions to manipulate."
+    },
+    "Ace of Swords": {
+        "image": "ace_of_swords.jpg",
+        "upright": "Symbolizes mental clarity, breakthroughs, and truth cutting through confusion. Represents new ideas, intellectual power, and decisive action. Encourages sharp thinking and honesty.",
+        "reversed": "Indicates mental fog, chaos, or miscommunication. May suggest harsh truths, confusion, or information being weaponized."
+    },
+    "2 of Swords": {
+        "image": "2_of_swords.jpg",
+        "upright": "Represents stalemate, indecision, and avoidance of truth. Symbolizes the need to make a difficult choice while feeling torn. Encourages confronting reality despite discomfort.",
+        "reversed": "Suggests forced decisions, lesser evils, or releasing denial. May indicate the painful clarity that comes when avoiding a choice is no longer possible."
+    },
+    "3 of Swords": {
+        "image": "3_of_swords.jpg",
+        "upright": "Symbolizes heartbreak, betrayal, and emotional pain. Represents grief, sorrow, or the piercing truth of loss. Encourages acknowledging hurt to begin healing.",
+        "reversed": "Indicates healing, forgiveness, or emotional recovery. May suggest releasing pain or finding strength after sorrow."
+    },
+    "4 of Swords": {
+        "image": "4_of_swords.jpg",
+        "upright": "Represents rest, recuperation, and mental pause. Symbolizes meditation, withdrawal to regain strength, or recovery from illness. Encourages stillness before re-engaging.",
+        "reversed": "Suggests burnout, restlessness, or avoidance of necessary rest. May indicate insomnia or anxiety preventing peace."
+    },
+    "5 of Swords": {
+        "image": "5_of_swords.jpg",
+        "upright": "Symbolizes conflict, winning at all costs, and hollow victories. Represents arguments where pride overshadows resolution. Warns against sacrificing relationships for temporary gain.",
+        "reversed": "Indicates reconciliation, letting go of grudges, or choosing peace over ego. May suggest learning from past conflicts."
+    },
+    "6 of Swords": {
+        "image": "6_of_swords.jpg",
+        "upright": "Represents transition, moving beyond hardship, and emotional progress. Symbolizes a journey (physical or mental) toward calmer waters. Encourages leaving pain behind.",
+        "reversed": "Suggests resistance to change, carrying baggage, or delayed healing. May indicate being stuck in a difficult situation mentally."
+    },
+    "7 of Swords": {
+        "image": "7_of_swords.jpg",
+        "upright": "Symbolizes deception, cunning, and strategic thinking. Represents stealth, secrecy, or the need to be cautious of betrayal. Warns against dishonesty or being deceived.",
+        "reversed": "Indicates confession, reconsidering actions, or moral clarity. May suggest a guilty conscience or exposing hidden truths."
+    },
+    "8 of Swords": {
+        "image": "8_of_swords.jpg",
+        "upright": "Represents feeling trapped, self-imposed limitations, and victim mentality. Symbolizes being blinded by fear or perceived powerlessness. Encourages recognizing one’s freedom.",
+        "reversed": "Suggests breaking free, new perspectives, or reclaiming agency. May indicate releasing self-sabotaging beliefs."
+    },
+    "9 of Swords": {
+        "image": "9_of_swords.jpg",
+        "upright": "Symbolizes anxiety, nightmares, and overwhelming worry. Represents sleepless nights, guilt, or irrational fears. Encourages seeking support to ease mental distress.",
+        "reversed": "Indicates hope, confronting fears, or gradual relief. May suggest the worst is over or reaching out for help."
+    },
+    "10 of Swords": {
+        "image": "10_of_swords.jpg",
+        "upright": "Represents painful endings, betrayal, and hitting rock bottom. Symbolizes an inevitable conclusion, often dramatic but necessary for rebirth. Encourages release and surrender.",
+        "reversed": "Suggests recovery, resisting necessary endings, or delayed closure. May indicate the first steps toward healing after devastation."
+    },
+    "Page of Swords": {
+        "image": "page_of_swords.jpg",
+        "upright": "Symbolizes curiosity, intellectual exploration, and new ideas. Represents a messenger bringing truth or a vigilant observer. Encourages open-mindedness and communication.",
+        "reversed": "Indicates gossip, deception, or hasty judgments. May suggest immaturity in thought or spreading misinformation."
+    },
+    "Knight of Swords": {
+        "image": "knight_of_swords.jpg",
+        "upright": "Represents swift action, assertiveness, and charging ahead. Symbolizes a sharp mind, ambition, or rushing into battles (literal or metaphorical). Encourages boldness but warns of recklessness.",
+        "reversed": "Suggests aggression, impulsiveness, or lack of direction. May indicate arguments, rash decisions, or bullying behavior."
+    },
+    "Queen of Swords": {
+        "image": "queen_of_swords.jpg",
+        "upright": "Symbolizes independence, clear judgment, and intellectual strength. Represents a perceptive, honest woman who values truth over sentiment. Encourages cutting through illusions with wisdom.",
+        "reversed": "Indicates coldness, bitterness, or harsh criticism. May suggest emotional detachment used as a weapon."
+    },
+    "King of Swords": {
+        "image": "king_of_swords.jpg",
+        "upright": "Represents authority, intellectual power, and unwavering logic. Symbolizes fair but stern leadership, often in legal or analytical roles. Encourages decisions based on reason.",
+        "reversed": "Suggests manipulation, cruelty, or abuse of power. May indicate tyranny, heartless judgment, or oppressive control."
+    },
+    "Ace of Pentacles": {
+        "image": "ace_of_pentacles.jpg",
+        "upright": "Symbolizes new financial opportunities, prosperity, and material security. Represents the seed of wealth, career growth, or physical well-being. Encourages practical beginnings.",
+        "reversed": "Indicates missed chances, financial loss, or poor investments. May suggest instability or lack of planning in material matters."
+    },
+    "2 of Pentacles": {
+        "image": "2_of_pentacles.jpg",
+        "upright": "Represents adaptability, balancing resources, and multitasking. Symbolizes juggling finances, time, or priorities with flexibility. Encourages finding harmony in change.",
+        "reversed": "Suggests disorganization, financial stress, or being overwhelmed. May indicate poor money management or instability."
+    },
+    "3 of Pentacles": {
+        "image": "3_of_pentacles.jpg",
+        "upright": "Symbolizes teamwork, craftsmanship, and collaborative success. Represents skilled work, dedication, and building something lasting. Encourages learning from experts.",
+        "reversed": "Indicates lack of teamwork, poor planning, or mediocrity. May suggest disorganized efforts or unrecognized talent."
+    },
+    "4 of Pentacles": {
+        "image": "4_of_pentacles.jpg",
+        "upright": "Represents stability, saving, and cautious control. Symbolizes holding tightly to resources, security, or traditions. Warns against excessive rigidity.",
+        "reversed": "Suggests greed, materialism, or fear of loss. May indicate hoarding or resistance to necessary change."
+    },
+    "5 of Pentacles": {
+        "image": "5_of_pentacles.jpg",
+        "upright": "Symbolizes financial hardship, exclusion, and struggle. Represents poverty (material or emotional), feeling abandoned, or temporary misfortune. Encourages seeking help.",
+        "reversed": "Indicates recovery, charity, or improving circumstances. May suggest finding support or rebuilding after loss."
+    },
+    "6 of Pentacles": {
+        "image": "6_of_pentacles.jpg",
+        "upright": "Represents generosity, charity, and fair exchange. Symbolizes giving/receiving help, financial balance, and karmic fairness. Encourages sharing abundance.",
+        "reversed": "Suggests power imbalances, strings-attached gifts, or financial dependency. May indicate exploitation or unfair treatment."
+    },
+    "7 of Pentacles": {
+        "image": "7_of_pentacles.jpg",
+        "upright": "Symbolizes patience, long-term investment, and assessing progress. Represents waiting for efforts to bear fruit, often in agriculture or business. Encourages perseverance.",
+        "reversed": "Indicates wasted effort, impatience, or lack of results. May suggest giving up too soon or poor planning."
+    },
+    "8 of Pentacles": {
+        "image": "8_of_pentacles.jpg",
+        "upright": "Represents dedication, skill-building, and meticulous work. Symbolizes apprenticeships, honing a craft, and pride in labor. Encourages focus on mastery.",
+        "reversed": "Suggests perfectionism, lack of passion, or uninspired work. May indicate boredom or neglecting quality."
+    },
+    "9 of Pentacles": {
+        "image": "9_of_pentacles.jpg",
+        "upright": "Symbolizes abundance, self-sufficiency, and enjoying rewards. Represents financial independence, luxury, and the fruits of discipline. Encourages gratitude for achievements.",
+        "reversed": "Indicates financial recklessness, loneliness, or false appearances. May suggest materialism overshadowing happiness."
+    },
+    "10 of Pentacles": {
+        "image": "10_of_pentacles.jpg",
+        "upright": "Represents legacy, family wealth, and long-term stability. Symbolizes generational blessings, retirement, or enduring success. Encourages securing the future.",
+        "reversed": "Suggests financial disputes, unstable foundations, or family conflicts. May indicate lost inheritances or mismanagement."
+    },
+    "Page of Pentacles": {
+        "image": "page_of_pentacles.jpg",
+        "upright": "Symbolizes practical learning, new opportunities, and financial potential. Represents a studious messenger bringing news of growth or a promising venture. Encourages curiosity in tangible pursuits.",
+        "reversed": "Indicates procrastination, wasted potential, or impractical dreams. May suggest laziness or poor financial decisions."
+    },
+    "Knight of Pentacles": {
+        "image": "knight_of_pentacles.jpg",
+        "upright": "Represents diligence, routine, and steadfast effort. Symbolizes slow but steady progress, reliability, and methodical work. Encourages patience and responsibility.",
+        "reversed": "Suggests boredom, feeling stuck, or resistance to change. May indicate plodding without passion or stagnation."
+    },
+    "Queen of Pentacles": {
+        "image": "queen_of_pentacles.jpg",
+        "upright": "Symbolizes nurturing abundance, practicality, and down-to-earth care. Represents a generous provider, often in homemaking or business. Encourages balancing wealth and well-being.",
+        "reversed": "Indicates smothering, financial insecurity, or neglect. May suggest materialism over emotional needs."
+    },
+    "King of Pentacles": {
+        "image": "king_of_pentacles.jpg",
+        "upright": "Represents wealth, leadership, and financial mastery. Symbolizes a successful entrepreneur, investor, or provider. Encourages wise management and long-term security.",
+        "reversed": "Suggests greed, indulgence, or poor financial control. May indicate corruption or valuing money over people."
+    }
+}

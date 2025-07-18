@@ -1,6 +1,4 @@
-![Ai Tarot Readings]
-
-https://i.redd.it/akowzb7avmdf1.png
+![Ai Tarot Readings](https://i.redd.it/akowzb7avmdf1.png)
 
 ===============================================================
 

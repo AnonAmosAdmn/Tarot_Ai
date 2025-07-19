@@ -8,6 +8,7 @@ import math
 import openai
 from openai import OpenAI
 from dotenv import load_dotenv
+import re
 
 # Load API key from .env file
 load_dotenv()
@@ -294,71 +295,55 @@ class TarotGame:
                     f"Meaning: {card['meaning']}\n\n"
                 )
             
-            prompt += ("""
-            ||| STRICT FORMATTING COMMANDS |||
+            prompt += (
+                "\n\n"
+                "||| STRICT FORMATTING COMMANDS |||\n\n"
+                "1. **MANDATORY SPACING FORMAT**:\n"
+                "[NEWLINE][NEWLINE]\n"
+                "[EMOJI] [Position#] - [Position Name]: [Card Name] (Upright/Reversed)[NEWLINE]\n"
+                "[Interpretation paragraph 1][NEWLINE]\n"
+                "[Interpretation paragraph 2][NEWLINE]\n"
+                "[NEWLINE]\n\n"
+                "2. **INTERPRETATION STRUCTURE**:\n"
+                "- First line: Core meaning (complete sentence)\n"
+                "- Second line: Practical implications\n"
+                "- Third line: Intuitive message\n"
+                "- Fourth line: Connection to other cards\n\n"
+                "3. **FINAL REFLECTION FORMAT**:\n"
+                "[NEWLINE][NEWLINE]\n"
+                "🔮 Final Reflection:[NEWLINE]\n"
+                "[Paragraph 1][NEWLINE]\n"
+                "[Paragraph 2][NEWLINE]\n"
+                "[Closing statement][NEWLINE]\n"
+                "[NEWLINE]\n\n"
+                "always use the same emojis they are delimiters and return the output in bullet points as below:\n\n"
+                "=== EXAMPLE OF REQUIRED OUTPUT ===\n\n"
+                "🌟 1 - Present: 4 of Wands (Reversed)\n"
+                "You're in a phase where what should feel stable or celebratory—like home, relationships, or creative achievements—feels instead disrupted. This card reversed speaks of conflict within a familiar structure, perhaps tension in a home, team, or partnership. You may be transitioning away from what once brought you comfort, or feeling unsupported as you try to move forward.\n\n"
+                "⚔️ 2 - Challenge: 2 of Cups (Reversed)\n"
+                "Your biggest challenge right now is a breakdown in communication or emotional connection with someone important. A partnership or relationship is out of balance—maybe romantic, maybe a close friend or ally. Mistrust or misunderstandings may be at play, and healing this rift could be central to your current struggle.\n\n"
+                "⏳ 3 - Past: 6 of Cups (Reversed)\n"
+                "You've recently been forced to let go of the past—perhaps a memory, old pattern, or nostalgia was holding you back. Whether it was comforting or painful, you’re now in the process of moving forward. This is a sign of emotional growth, though not without discomfort.\n\n"
+                "🌑 4 - Future: The Moon (Upright)\n"
+                "What’s coming next may feel uncertain or disorienting. The Moon brings confusion, illusions, and hidden truths—things are not what they appear. You will need to rely on intuition, dreams, and your inner compass to navigate what lies ahead. Don't act on fear or illusion—seek clarity in the fog.\n\n"
+                "☁️ 5 - Above (Conscious Goal): 6 of Wands (Reversed)\n"
+                "You're struggling with recognition and validation. You might feel that your efforts go unnoticed, or you fear failure and public judgment. This card can also point to ego wounds—perhaps you want to win or be seen, but fear losing face. It’s a reminder that true success comes from within, not applause.\n\n"
+                "🧑‍🤝‍🧑 6 - Below (Unconscious Influence): 3 of Cups (Upright)\n"
+                "At a deeper level, you crave connection, joy, and genuine friendship. There's a strong desire to belong and be celebrated with others—even if recent events have made you feel isolated. This unconscious influence may be guiding you to seek a new sense of community or re-establish joyful bonds.\n\n"
+                "🌀 7 - Advice: The World (Reversed)\n"
+                "You're being asked to complete what you’ve left unfinished. There’s a cycle in your life—emotional, spiritual, or literal—that hasn’t come to full closure. Fear of change, fear of endings, or feeling like something’s missing is blocking your progress. It’s time to gather your strength and see the journey through.\n\n"
+                "💨 8 - External Influences: Knight of Swords (Upright)\n"
+                "Your environment is fast-moving and intense, with people or events pushing you toward rapid decisions. Someone around you may be aggressive in their opinions or rushing things. Be wary of impulsive actions—both your own and others'. Stay grounded as you navigate this external pressure.\n\n"
+                "💖 9 - Hopes/Fears: 10 of Cups (Upright)\n"
+                "At your core, you long for peace, harmony, and emotional fulfillment, particularly within your home or family life. This card speaks to the dream of deep connection, support, and love. But since this is also in your fears, perhaps you’re afraid it may never come—or that you’ll sabotage it. It’s a beautiful vision, but you may fear it's just out of reach.\n\n"
+                "🌱 10 - Outcome: 7 of Pentacles (Upright)\n"
+                "Your outcome suggests growth, but not overnight. This is a card of patient progress—planting seeds and watching them slowly bear fruit. Your effort will pay off, but only if you assess your investments wisely. This may not be a dramatic resolution, but it’s a solid one: a future earned through care, consistency, and self-evaluation.\n\n"
+                "🔮 Final Reflection:\n"
+                "This spread tells the story of someone in emotional transition—between letting go of the past, confronting a broken bond or relationship, and walking a foggy, uncertain path forward. You're being invited to face illusions, finish old cycles, and trust your intuition. While it may feel like support is lacking now, the foundation for lasting growth, healing, and joyful connection is already within reach—you just have to be willing to do the patient work, and close what needs closing.\n\n"
+                "The cards encourage you to face these challenges directly...\n"
+                "Remember: Growth often comes through discomfort.\n"
+            )
 
-            1. **MANDATORY SPACING FORMAT**:
-            [NEWLINE][NEWLINE]
-            [EMOJI] [Position#] - [Position Name]: [Card Name] (Upright/Reversed)[NEWLINE]
-            [Interpretation paragraph 1][NEWLINE]
-            [Interpretation paragraph 2][NEWLINE]
-            [NEWLINE]
-
-            2. **INTERPRETATION STRUCTURE**:
-            - First line: Core meaning (complete sentence)
-            - Second line: Practical implications
-            - Third line: Intuitive message
-            - Fourth line: Connection to other cards
-
-            3. **FINAL REFLECTION FORMAT**:
-            [NEWLINE][NEWLINE]
-            🔮 Final Reflection:[NEWLINE]
-            [Paragraph 1][NEWLINE]
-            [Paragraph 2][NEWLINE]
-            [Closing statement][NEWLINE]
-            [NEWLINE]
-
-always use the same emojis they are delimiters
-
-            === EXAMPLE OF REQUIRED OUTPUT ===
-
-🌟 1 - Present: 4 of Wands (Reversed)
-You're in a phase where what should feel stable or celebratory—like home, relationships, or creative achievements—feels instead disrupted. This card reversed speaks of conflict within a familiar structure, perhaps tension in a home, team, or partnership. You may be transitioning away from what once brought you comfort, or feeling unsupported as you try to move forward.
-
-⚔️ 2 - Challenge: 2 of Cups (Reversed)
-Your biggest challenge right now is a breakdown in communication or emotional connection with someone important. A partnership or relationship is out of balance—maybe romantic, maybe a close friend or ally. Mistrust or misunderstandings may be at play, and healing this rift could be central to your current struggle.
-
-⏳ 3 - Past: 6 of Cups (Reversed)
-You've recently been forced to let go of the past—perhaps a memory, old pattern, or nostalgia was holding you back. Whether it was comforting or painful, you’re now in the process of moving forward. This is a sign of emotional growth, though not without discomfort.
-
-🌑 4 - Future: The Moon (Upright)
-What’s coming next may feel uncertain or disorienting. The Moon brings confusion, illusions, and hidden truths—things are not what they appear. You will need to rely on intuition, dreams, and your inner compass to navigate what lies ahead. Don't act on fear or illusion—seek clarity in the fog.
-
-☁️ 5 - Above (Conscious Goal): 6 of Wands (Reversed)
-You're struggling with recognition and validation. You might feel that your efforts go unnoticed, or you fear failure and public judgment. This card can also point to ego wounds—perhaps you want to win or be seen, but fear losing face. It’s a reminder that true success comes from within, not applause.
-
-🧑‍🤝‍🧑 6 - Below (Unconscious Influence): 3 of Cups (Upright)
-At a deeper level, you crave connection, joy, and genuine friendship. There's a strong desire to belong and be celebrated with others—even if recent events have made you feel isolated. This unconscious influence may be guiding you to seek a new sense of community or re-establish joyful bonds.
-
-🌀 7 - Advice: The World (Reversed)
-You're being asked to complete what you’ve left unfinished. There’s a cycle in your life—emotional, spiritual, or literal—that hasn’t come to full closure. Fear of change, fear of endings, or feeling like something’s missing is blocking your progress. It’s time to gather your strength and see the journey through.
-
-💨 8 - External Influences: Knight of Swords (Upright)
-Your environment is fast-moving and intense, with people or events pushing you toward rapid decisions. Someone around you may be aggressive in their opinions or rushing things. Be wary of impulsive actions—both your own and others'. Stay grounded as you navigate this external pressure.
-
-💖 9 - Hopes/Fears: 10 of Cups (Upright)
-At your core, you long for peace, harmony, and emotional fulfillment, particularly within your home or family life. This card speaks to the dream of deep connection, support, and love. But since this is also in your fears, perhaps you’re afraid it may never come—or that you’ll sabotage it. It’s a beautiful vision, but you may fear it's just out of reach.
-
-🌱 10 - Outcome: 7 of Pentacles (Upright)
-Your outcome suggests growth, but not overnight. This is a card of patient progress—planting seeds and watching them slowly bear fruit. Your effort will pay off, but only if you assess your investments wisely. This may not be a dramatic resolution, but it’s a solid one: a future earned through care, consistency, and self-evaluation.
-
-🔮 Final Reflection:
-This spread tells the story of someone in emotional transition—between letting go of the past, confronting a broken bond or relationship, and walking a foggy, uncertain path forward. You're being invited to face illusions, finish old cycles, and trust your intuition. While it may feel like support is lacking now, the foundation for lasting growth, healing, and joyful connection is already within reach—you just have to be willing to do the patient work, and close what needs closing.
-
-            The cards encourage you to face these challenges directly...
-
-            Remember: Growth often comes through discomfort.
-            """)
             
             # Updated OpenAI API call
             client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -669,37 +654,31 @@ This spread tells the story of someone in emotional transition—between letting
         title = title_font.render("Mystical Interpretation", True, DARK_PURPLE)
         screen.blit(title, (box_x + box_width//2 - title.get_width()//2, box_y + 20))
         
-        # Process and render text with emoji breaks
+        # Emojis as delimiters (escaped properly for regex)
         emoji_list = ["🌟", "⚔️", "⏳", "🌑", "☁️", "🧑‍🤝‍🧑", "🌀", "💨", "💖", "🌱", "🔮"]
+        emoji_pattern = "(" + "|".join(re.escape(e) for e in emoji_list) + ")"
+
+        # Split text while keeping the emoji as prefix
+        chunks = re.split(emoji_pattern, self.ai_response)
         sections = []
-        current_section = ""
-        
-        # Split text at emojis while keeping them
-        for char in self.ai_response:
-            if char in emoji_list:
-                if current_section:
-                    sections.append(current_section)
-                    current_section = ""
-            current_section += char
-        if current_section:
-            sections.append(current_section)
+        for i in range(1, len(chunks), 2):
+            emoji = chunks[i]
+            body = chunks[i + 1] if i + 1 < len(chunks) else ""
+            sections.append(emoji + body.strip())
         
         # Render each section with proper spacing
         line_height = 30
         max_lines = (box_height - 100) // line_height
         current_y = box_y + 80
         lines_rendered = 0
-        
+
         for section in sections:
-            # Skip empty sections
             if not section.strip():
                 continue
-                
-            # Split section into words
+
             words = section.split()
             current_line = ""
-            
-            # Word wrapping logic
+
             for word in words:
                 test_line = current_line + word + " "
                 if font.size(test_line)[0] < box_width - 40:
@@ -707,23 +686,22 @@ This spread tells the story of someone in emotional transition—between letting
                 else:
                     if lines_rendered >= max_lines:
                         break
-                    text = font.render(current_line, True, DARK_PURPLE)
+                    text = font.render(current_line.strip(), True, DARK_PURPLE)
                     screen.blit(text, (box_x + 20, current_y))
                     current_y += line_height
                     lines_rendered += 1
                     current_line = word + " "
-            
-            # Render remaining words
+
             if current_line and lines_rendered < max_lines:
-                text = font.render(current_line, True, DARK_PURPLE)
+                text = font.render(current_line.strip(), True, DARK_PURPLE)
                 screen.blit(text, (box_x + 20, current_y))
                 current_y += line_height
                 lines_rendered += 1
-            
-            # Add extra space between sections
+
+            # Add full spacing after section
             if lines_rendered < max_lines and section != sections[-1]:
-                current_y += line_height // 2  # Half-line spacing
-                lines_rendered += 0.5
+                current_y += line_height  # full line spacing
+
         
         # Draw close button
         close_button_y = box_y + box_height - 60

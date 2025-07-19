@@ -37,7 +37,7 @@ pip install pygame openai python-dotenv
 
 ===============================================================
 
-# 7. Run the game :
+# 6. Run the game :
 
 python3 tarot.py
 

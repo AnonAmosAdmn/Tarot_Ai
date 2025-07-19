@@ -8,7 +8,6 @@ import math
 import openai
 from openai import OpenAI
 from dotenv import load_dotenv
-import re
 
 # Load API key from .env file
 load_dotenv()
@@ -316,7 +315,8 @@ class TarotGame:
                 "[Paragraph 2][NEWLINE]\n"
                 "[Closing statement][NEWLINE]\n"
                 "[NEWLINE]\n\n"
-                "always use the same emojis they are delimiters and return the output in bullet points as below:\n\n"
+                
+                "and return the output in bullet points as below:\n\n"
                 "=== EXAMPLE OF REQUIRED OUTPUT ===\n\n"
                 "🌟 1 - Present: 4 of Wands (Reversed)\n"
                 "You're in a phase where what should feel stable or celebratory—like home, relationships, or creative achievements—feels instead disrupted. This card reversed speaks of conflict within a familiar structure, perhaps tension in a home, team, or partnership. You may be transitioning away from what once brought you comfort, or feeling unsupported as you try to move forward.\n\n"
@@ -654,31 +654,37 @@ class TarotGame:
         title = title_font.render("Mystical Interpretation", True, DARK_PURPLE)
         screen.blit(title, (box_x + box_width//2 - title.get_width()//2, box_y + 20))
         
-        # Emojis as delimiters (escaped properly for regex)
+        # Process and render text with emoji breaks
         emoji_list = ["🌟", "⚔️", "⏳", "🌑", "☁️", "🧑‍🤝‍🧑", "🌀", "💨", "💖", "🌱", "🔮"]
-        emoji_pattern = "(" + "|".join(re.escape(e) for e in emoji_list) + ")"
-
-        # Split text while keeping the emoji as prefix
-        chunks = re.split(emoji_pattern, self.ai_response)
         sections = []
-        for i in range(1, len(chunks), 2):
-            emoji = chunks[i]
-            body = chunks[i + 1] if i + 1 < len(chunks) else ""
-            sections.append(emoji + body.strip())
+        current_section = ""
+        
+        # Split text at emojis while keeping them
+        for char in self.ai_response:
+            if char in emoji_list:
+                if current_section:
+                    sections.append(current_section)
+                    current_section = ""
+            current_section += char
+        if current_section:
+            sections.append(current_section)
         
         # Render each section with proper spacing
         line_height = 30
         max_lines = (box_height - 100) // line_height
         current_y = box_y + 80
         lines_rendered = 0
-
+        
         for section in sections:
+            # Skip empty sections
             if not section.strip():
                 continue
-
+                
+            # Split section into words
             words = section.split()
             current_line = ""
-
+            
+            # Word wrapping logic
             for word in words:
                 test_line = current_line + word + " "
                 if font.size(test_line)[0] < box_width - 40:
@@ -686,22 +692,23 @@ class TarotGame:
                 else:
                     if lines_rendered >= max_lines:
                         break
-                    text = font.render(current_line.strip(), True, DARK_PURPLE)
+                    text = font.render(current_line, True, DARK_PURPLE)
                     screen.blit(text, (box_x + 20, current_y))
                     current_y += line_height
                     lines_rendered += 1
                     current_line = word + " "
-
+            
+            # Render remaining words
             if current_line and lines_rendered < max_lines:
-                text = font.render(current_line.strip(), True, DARK_PURPLE)
+                text = font.render(current_line, True, DARK_PURPLE)
                 screen.blit(text, (box_x + 20, current_y))
                 current_y += line_height
                 lines_rendered += 1
-
-            # Add full spacing after section
+            
+            # Add extra space between sections
             if lines_rendered < max_lines and section != sections[-1]:
-                current_y += line_height  # full line spacing
-
+                current_y += line_height // 2  # Half-line spacing
+                lines_rendered += 0.5
         
         # Draw close button
         close_button_y = box_y + box_height - 60

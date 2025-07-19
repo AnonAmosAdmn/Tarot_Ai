@@ -31,15 +31,9 @@ input your Open Ai api key
 
 ===============================================================
 
-# 5. Install Open Ai:
+# 5. Install Requirements:
 
-pip install openai
-
-===============================================================
-
-# 6. Install Pygame:
-
-pip install pygame
+pip install pygame openai python-dotenv
 
 ===============================================================
 
